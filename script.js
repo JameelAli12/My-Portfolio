@@ -9,14 +9,31 @@
 // contactButton.textContent = "Contact"
 // navBar.append(homeButton,projectsButton,contactButton)
 // content.appendChild(navBar)
-
 const terminal = document.getElementById("terminal")
 
-function addLine(line) {
-    const newEl = document.createElement("p")
-    newEl.textContent = line;
-    terminal.append(newEl)
+function addLine(line, callback) {
+    const newEl = document. createElement("p")
+    terminal.appendChild(newEl)
+    let index = 0;
+    const interval = setInterval(() => {
+        if(index < line.length) {
+            newEl.textContent += line[index]
+            index++
+        }
+        else {
+            clearInterval(interval)
+            if(typeof callback === "function") {
+                callback()
+            }
+        }
+    }, 100);
 }
 
-addLine("> Initializing...")
-addLine("> Loading Modules...")
+addLine("> Initializing...", () => {
+    addLine("> Loading modules...", () => {
+        addLine("> Connecting...", () => {
+            addLine("> Welcome, Jameeel Ali.")
+        })
+    })
+})
+
