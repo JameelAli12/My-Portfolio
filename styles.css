@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+}
+
+#terminal {
+    height: 100vh;
+    padding: 20px;
+}
+
