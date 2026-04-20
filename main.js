@@ -9,26 +9,9 @@
 // contactButton.textContent = "Contact"
 // navBar.append(homeButton,projectsButton,contactButton)
 // content.appendChild(navBar)
+
+import {addLine} from "./terminal.js"
 const terminal = document.getElementById("terminal")
-
-function addLine(line) {
-    const newEl = document.createElement("p")
-    terminal.appendChild(newEl)
-
-    let i = 0;
-    return new Promise((resolve) => {
-        const interval = setInterval(() => {
-            if(i < line.length) {
-                newEl.textContent += line[i]
-                i++
-            }
-            else {
-                clearInterval(interval)
-                resolve()
-            }
-        }, 100);
-    })
-}
 
 async function run() {
     await addLine('>>>>>')
