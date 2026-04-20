@@ -11,11 +11,13 @@
 // content.appendChild(navBar)
 
 import {addLine} from "./terminal.js"
+import { enterToContinue } from "./entering.js"
 const terminal = document.getElementById("terminal")
 
 async function run() {
-    await addLine('>>>>>')
-    await addLine('......')
+    await addLine('> Welcome')
+    await addLine('Loading...')
+    await enterToContinue()
 }
 
 run()
