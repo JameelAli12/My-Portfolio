@@ -1,5 +1,5 @@
 export function addLine(line) {
-    const newEl = document.createElement("p")
+    const newEl = document.createElement("div")
     const textSpan = document.createElement("span")
     textSpan.classList.add("text")
     const cursorSpan = document.createElement("span")
@@ -7,8 +7,8 @@ export function addLine(line) {
     cursorSpan.classList.add('cursor')
     newEl.append(textSpan, cursorSpan)
     terminal.appendChild(newEl)
-    
-    let i = 0;
+
+    let i=0;
     return new Promise((resolve) => {
         const interval = setInterval(() => {
             if(i < line.length) {
@@ -17,8 +17,8 @@ export function addLine(line) {
             }
             else {
                 clearInterval(interval)
-                cursorSpan.remove()
                 resolve()
+                cursorSpan.remove()
             }
         }, 100);
     })

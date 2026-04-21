@@ -40,3 +40,15 @@ body {
 .text {
     font-size: 20px;
 }
+
+@keyframes glitching {
+    0% {opacity: 1;}
+    25% {opacity: 0.5; transform: translateX(-5px)}
+    50% {opacity: 1; transform: translateX(4px)}
+    75% {opacity: 0.5; transform: translateX(-2px)}
+    100% {opacity: 1; transform:none}
+}
+
+.glitch {
+    animation: glitching 0.2s
+}
