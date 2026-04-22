@@ -1,12 +1,13 @@
 export function addLine(line) {
-    const newEl = document.createElement("div")
+    const container = document.getElementById("container")
+    const textContainer = document.createElement("div")
     const textSpan = document.createElement("span")
     textSpan.classList.add("text")
     const cursorSpan = document.createElement("span")
     cursorSpan.textContent = '|'
     cursorSpan.classList.add('cursor')
-    newEl.append(textSpan, cursorSpan)
-    terminal.appendChild(newEl)
+    textContainer.append(textSpan, cursorSpan)
+    container.appendChild(textContainer)
 
     let i=0;
     return new Promise((resolve) => {
