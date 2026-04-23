@@ -49,12 +49,13 @@ body {
 
 @keyframes glitching {
     0% {opacity: 1;}
-    25% {opacity: 0.5; transform: translateX(-45px)}
-    50% {opacity: 1; transform: translateX(44px)}
-    75% {opacity: 0.5; transform: translateX(-42px)}
-    100% {opacity: 1; transform:none}
+    19% {opacity: 0.2; transform: translateX(-2px); text-shadow: 2px 2px 5px red, -2px 0 cyan; letter-spacing: 3px;}
+    57% {opacity: 1; transform: skewX(5deg); text-shadow: -3px 0 red, 3px 3px 7px cyan; letter-spacing: 0px;}
+    73% {opacity: 0.3; transform: translateX(-1px); text-shadow: 4px 4px 9px red, -4px 0 cyan;}
+    90% {opacity: 1; transform: skewX(-5deg); text-shadow: -2px 0 red, 2px 2px 5px 0 cyan; letter-spacing: -10px}
+    100% {opacity: 1; transform:none; text-shadow: none; letter-spacing: 0px;}
 }
 
 .glitch {
-    animation: glitching 0.2s
+    animation: glitching 0.1s
 }
