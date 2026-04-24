@@ -12,7 +12,6 @@ async function run() {
     await addLine('Enter to Continue ↵')
     await enterToContinue()
     await runTransition(container)
-    await delay(100)
     container.classList.add("fade-out")
     container.remove()
     createBox()
